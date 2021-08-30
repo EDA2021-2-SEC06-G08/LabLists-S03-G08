@@ -54,9 +54,8 @@ def newCatalog():
     catalog['books'] = lt.newList()
     catalog['authors'] = lt.newList('ARRAY_LIST',
                                     cmpfunction=compareauthors)
-    catalog['tags'] = lt.newList('ARRAY_LIST',
-                                 cmpfunction=comparetagnames)
-    catalog['book_tags'] = lt.newList('ARRAY_LIST')
+    catalog['tags'] = lt.newList(cmpfunction=comparetagnames)
+    catalog['book_tags'] = lt.newList()
 
     return catalog
 
